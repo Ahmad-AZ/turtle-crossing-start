@@ -12,7 +12,7 @@ class Player(Turtle):
         self.color('black')
         self.shape('turtle')
         self.setheading(90)
-        self.goto(STARTING_POSITION[0], STARTING_POSITION[1])
+        self.update_position()
 
 
 

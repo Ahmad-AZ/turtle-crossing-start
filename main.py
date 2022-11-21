@@ -25,17 +25,19 @@ while game_is_on:
     time.sleep(0.2)
     screen.update()
 
+
+    # Detet crossing the street
     if player.ycor() > 280:
         player.update_position()
-        score.update_score()
-
+        score.increase_level()
+    # Detect collision
     if cars.check_collision(player):
         score.finish()
         game_is_on = False
 
 
     cars.generate_car()
-    cars.move_car(score.score)
+    cars.move_car(score.level)
 
 
 
